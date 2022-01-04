@@ -1,4 +1,4 @@
-import '@reach/combobox/styles.css';
+import "@reach/combobox/styles.css";
 
 import {
   Combobox,
@@ -6,15 +6,15 @@ import {
   ComboboxList,
   ComboboxOption,
   ComboboxPopover,
-} from '@reach/combobox';
-import { matchSorter } from 'match-sorter';
-import * as React from 'react';
-import { useThrottle } from 'react-use';
+} from "@reach/combobox";
+import { matchSorter } from "match-sorter";
+import * as React from "react";
+import { useThrottle } from "react-use";
 
-import { accounts } from './accounts';
+import { accounts } from "../domain/accounts";
 
 export default function Example() {
-  const [term, setTerm] = React.useState('');
+  const [term, setTerm] = React.useState("");
   const results = useCityMatch(term);
   const handleChange = (event) => setTerm(event.target.value);
 
@@ -37,7 +37,7 @@ export default function Example() {
               ))}
             </ComboboxList>
           ) : (
-            <span style={{ display: 'block', margin: 8 }}>
+            <span style={{ display: "block", margin: 8 }}>
               No results found
             </span>
           )}
@@ -51,7 +51,7 @@ function useCityMatch(term) {
   const throttledTerm = useThrottle(term, 100);
   return React.useMemo(
     () =>
-      term.trim() === ''
+      term.trim() === ""
         ? null
         : matchSorter(accounts, term, {
             keys: [(item) => `${item.code} (${item.AccountName})`],
