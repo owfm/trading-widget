@@ -19,7 +19,7 @@ export default function Example() {
   const handleChange = (event) => setTerm(event.target.value);
 
   return (
-    <Combobox className="combobox-wrapper" aria-label="Accounts">
+    <Combobox className="full-width" aria-label="Accounts">
       <ComboboxInput
         placeholder="Account Search"
         className="combobox-input"

@@ -1,9 +1,5 @@
 {
-  "/AccountSearch": "pages/AccountSearch.js",
   "/_app": "pages/_app.js",
-  "/accounts": "pages/accounts.js",
-  "/api/hello": "pages/api/hello.js",
-  "/": "pages/index.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js"
 }

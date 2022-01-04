@@ -1,7 +1,7 @@
-import { AnimatePresence, motion } from 'framer-motion';
-import React from 'react';
+import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
 
-import AccountSearch from './AccountSearch';
+import AccountSearch from "./AccountSearch";
 
 const App = () => {
   const [ladderVisible, setLadderVisible] = React.useState(true);
@@ -19,13 +19,13 @@ const App = () => {
         const newValue =
           Math.random() > 0.5 ? prev + Math.random() : prev - Math.random();
         if (newValue > prev) {
-          setBuyChange('up');
+          setBuyChange("up");
           setTimeout(() => {
             setBuyChange(null);
           }, 350);
         }
         if (newValue < prev) {
-          setBuyChange('down');
+          setBuyChange("down");
           setTimeout(() => {
             setBuyChange(null);
           }, 350);
@@ -37,13 +37,13 @@ const App = () => {
         const newValue =
           Math.random() > 0.5 ? prev + Math.random() : prev - Math.random();
         if (newValue > prev) {
-          setSellChange('up');
+          setSellChange("up");
           setTimeout(() => {
             setSellChange(null);
           }, 350);
         }
         if (newValue < prev) {
-          setSellChange('down');
+          setSellChange("down");
           setTimeout(() => {
             setSellChange(null);
           }, 350);
@@ -74,13 +74,13 @@ const App = () => {
           <h2>SELL</h2>
           <section className="price">
             <div className="most-sig">
-              {sellValue.toFixed(2).split('.')[0].slice(0, -2)}
+              {sellValue.toFixed(2).split(".")[0].slice(0, -2)}
             </div>
             <div className="mid-sig">
-              {sellValue.toFixed(2).split('.')[0].slice(-2)}.
+              {sellValue.toFixed(2).split(".")[0].slice(-2)}.
             </div>
             <div className="least-sig">
-              {sellValue.toFixed(2).split('.')[1]}
+              {sellValue.toFixed(2).split(".")[1]}
             </div>
           </section>
           <AnimatePresence>
@@ -98,12 +98,12 @@ const App = () => {
           <h2>BUY</h2>
           <section className="price">
             <div className="most-sig">
-              {buyValue.toFixed(2).split('.')[0].slice(0, -2)}
+              {buyValue.toFixed(2).split(".")[0].slice(0, -2)}
             </div>
             <div className="mid-sig">
-              {buyValue.toFixed(2).split('.')[0].slice(-2)}.
+              {buyValue.toFixed(2).split(".")[0].slice(-2)}.
             </div>
-            <div className="least-sig">{buyValue.toFixed(2).split('.')[1]}</div>
+            <div className="least-sig">{buyValue.toFixed(2).split(".")[1]}</div>
           </section>
           <AnimatePresence>
             {sellChange !== null && (
@@ -138,18 +138,18 @@ const App = () => {
 
       <footer>
         <button className="half-width sell">sell</button>
-        <button className="half-width buy">buy </button>
+        <button className="half-width buy">buy</button>
         <motion.div
           whileHover={{
-            transform: 'rotate(180deg)',
-            backgroundColor: 'var(--stonex-primary-mid-blue)',
-            color: 'var(--stonex-neutral-grey-3)',
+            transform: "rotate(180deg)",
+            backgroundColor: "var(--stonex-primary-mid-blue)",
+            color: "var(--stonex-neutral-grey-3)",
           }}
-          transition={{ type: 'spring', stiffness: 250 }}
+          transition={{ type: "spring", stiffness: 250 }}
           className="expand-icon"
           onClick={handleLadderShowClick}
         >
-          {ladderVisible ? '-' : '+'}
+          {ladderVisible ? "-" : "+"}
         </motion.div>
       </footer>
 
@@ -158,9 +158,9 @@ const App = () => {
           <motion.section
             className="ladder-wrapper"
             initial={{ height: 0, opacity: 0, scale: 0.2 }}
-            animate={{ height: 'auto', opacity: 1, scale: 1 }}
+            animate={{ height: "auto", opacity: 1, scale: 1 }}
             exit={{ height: 0, scale: 0 }}
-            transition={[{ type: 'spring', stiffness: 300, duration: 2 }]}
+            transition={[{ type: "spring", stiffness: 300, duration: 2 }]}
           >
             <table id="price-ladder-table">
               <tr>
