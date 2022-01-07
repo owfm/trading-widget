@@ -245,10 +245,11 @@ section.price {
   width: 17px;
   border-radius: 50%;
   background-color: var(--stonex-primary-light-blue);
-  bottom: -14px;
-  left: -12px;
+  bottom: -12px;
+  left: -13px;
   color: var(--stonex-neutral-grey-4);
   cursor: pointer;
+  z-index: 5;
 }
 
 section.ladder-wrapper {
