@@ -70,7 +70,7 @@ const App = () => {
         </select>
       </header>
       <section className="price-container">
-        <button className="price-box buy">
+        <button onClick={() => window.alert("buy")} className="price-box buy">
           <h2>BUY</h2>
           <section className="price">
             <div className="most-sig">
@@ -93,7 +93,7 @@ const App = () => {
           </AnimatePresence>
         </button>
 
-        <button className="price-box sell">
+        <button onClick={() => window.alert("sell")} className="price-box sell">
           <h2>SELL</h2>
           <section className="price">
             <div className="most-sig">
