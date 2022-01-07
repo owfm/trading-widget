@@ -306,6 +306,11 @@ section.inputs input {
   border: 1px solid var(--stonex-neutral-grey-1);
 }
 
+section.inputs label {
+  font-size: 8px;
+  color: var(--stonex-neutral-text);
+}
+
 .full-width {
   width: 100%;
 }

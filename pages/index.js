@@ -121,20 +121,33 @@ const App = () => {
 
       <section className="inputs">
         <AccountSearch />
-        <select className="half-width">
-          <option>XLME</option>
-          <option>XALT</option>
-          <option>JLQD</option>
-        </select>
-        <select className="half-width">
-          <option>FOK</option>
-          <option>IOC</option>
-        </select>
-        <input className="half-width" type="number" />
-        <select className="half-width">
-          <option>tonne</option>
-          <option>lot</option>
-        </select>
+        <label htmlFor="liquidityProviderSelect" className="half-width">
+          Liquidity Provider
+          <select id="liquidityProviderSelect" className="full-width">
+            <option>XLME</option>
+            <option>XALT</option>
+            <option>JLQD</option>
+          </select>
+        </label>
+        <label htmlFor="timeInForceSelect" className="half-width">
+          Time in Force
+          <select className="full-width">
+            <option>FOK</option>
+            <option>IOC</option>
+          </select>
+        </label>
+        <label htmlFor="quantityInput" className="half-width">
+          Trade Quantity
+          <input className="half-width" type="number" className="full-width" />
+        </label>
+
+        <label htmlFor="unitInput" className="half-width">
+          Unit
+          <select id="unitInput" className="full-width">
+            <option>tonne</option>
+            <option>lot</option>
+          </select>
+        </label>
       </section>
 
       <footer>
