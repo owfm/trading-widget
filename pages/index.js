@@ -70,7 +70,30 @@ const App = () => {
         </select>
       </header>
       <section className="price-container">
-        <div className="price-box sell">
+        <button className="price-box buy">
+          <h2>BUY</h2>
+          <section className="price">
+            <div className="most-sig">
+              {buyValue.toFixed(2).split(".")[0].slice(0, -2)}
+            </div>
+            <div className="mid-sig">
+              {buyValue.toFixed(2).split(".")[0].slice(-2)}.
+            </div>
+            <div className="least-sig">{buyValue.toFixed(2).split(".")[1]}</div>
+          </section>
+          <AnimatePresence>
+            {sellChange !== null && (
+              <motion.div
+                className={`change ${sellChange}`}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
+                exit={{ opacity: 0 }}
+              />
+            )}
+          </AnimatePresence>
+        </button>
+
+        <button className="price-box sell">
           <h2>SELL</h2>
           <section className="price">
             <div className="most-sig">
@@ -93,29 +116,7 @@ const App = () => {
               />
             )}
           </AnimatePresence>
-        </div>
-        <div className="price-box buy">
-          <h2>BUY</h2>
-          <section className="price">
-            <div className="most-sig">
-              {buyValue.toFixed(2).split(".")[0].slice(0, -2)}
-            </div>
-            <div className="mid-sig">
-              {buyValue.toFixed(2).split(".")[0].slice(-2)}.
-            </div>
-            <div className="least-sig">{buyValue.toFixed(2).split(".")[1]}</div>
-          </section>
-          <AnimatePresence>
-            {sellChange !== null && (
-              <motion.div
-                className={`change ${sellChange}`}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 0 }}
-                exit={{ opacity: 0 }}
-              />
-            )}
-          </AnimatePresence>
-        </div>
+        </button>
       </section>
 
       <section className="inputs">
@@ -137,8 +138,8 @@ const App = () => {
       </section>
 
       <footer>
-        <button className="half-width sell">sell</button>
-        <button className="half-width buy">buy</button>
+        {/* <button className="half-width sell">sell</button>
+        <button className="half-width buy">buy</button> */}
         <motion.div
           whileHover={{
             transform: "rotate(180deg)",

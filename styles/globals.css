@@ -142,6 +142,17 @@ section.price-container {
   padding: 5px;
   border: 1px solid var(--stonex-neutral-grey-1);
   border-radius: 3px;
+  cursor: pointer;
+  height: 80px;
+}
+
+.price-box.sell:hover {
+  background-color: var(--stonex-primary-error);
+  color: var(--stonex-neutral-grey-4);
+}
+.price-box.buy:hover {
+  background-color: var(--stonex-primary-green);
+  color: var(--stonex-neutral-grey-4);
 }
 
 .price-box:first-child {
@@ -156,54 +167,19 @@ section.price-container {
   padding: 0;
   margin-top: 0;
   margin-bottom: 5px;
-  color: hsl(0, 0%, 40%);
 }
 
 .buy h2 {
-  text-align: right;
-}
-
-.sell h2 {
   text-align: left;
 }
 
-button {
-  font: normal normal 600 12px/14px Mulish;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  background: #e9eef1 0% 0% no-repeat padding-box;
-  border-radius: 3px;
-  opacity: 1;
-  border: none;
-  padding: 8px 0px;
-  width: 110px;
-  color: #555759;
-  cursor: pointer;
-}
-
-button:disabled {
-  background: var(--stonex-neutral-grey-2) 0% 0% no-repeat padding-box;
-  color: var(--stonex-neutral-disabled);
-}
-
-button.sell {
-  background: var(--stonex-primary-mid-blue) 0% 0% no-repeat padding-box;
-  color: #ffffff;
-}
-
-button.sell:hover {
-  background: var(--stonex-primary-dark-blue);
-}
-
-button:hover,
-button:active {
-  background: #d4dde3 0% 0% no-repeat padding-box;
+.sell h2 {
+  text-align: right;
 }
 
 footer {
-  margin: 6px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   background: var(--stonex-neutral-grey-1);
   gap: var(--gap);
   border-radius: 3px;
@@ -269,7 +245,7 @@ section.price {
   width: 17px;
   border-radius: 50%;
   background-color: var(--stonex-primary-light-blue);
-  bottom: -10px;
+  bottom: -14px;
   left: -12px;
   color: var(--stonex-neutral-grey-4);
   cursor: pointer;
@@ -279,14 +255,11 @@ section.ladder-wrapper {
   height: auto;
 }
 
-/* .expand-icon:hover {
-  transform: rotate(270deg);
-} */
-
 #price-ladder-table {
   border-collapse: collapse;
   width: 100%;
   text-align: center;
+  font-size: 13x;
 }
 
 #price-ladder-table td,
@@ -339,4 +312,18 @@ section.inputs input {
 
 .half-width {
   width: calc(50% - (var(--gap) / 2));
+}
+
+td:nth-child(1),
+td:nth-child(4) {
+  width: 15%;
+}
+
+td:nth-child(1) {
+  background-color: var(--stonex-primary-green);
+  color: var(--stonex-neutral-grey-4);
+}
+td:nth-child(4) {
+  background-color: var(--stonex-primary-error);
+  color: var(--stonex-neutral-grey-4);
 }
