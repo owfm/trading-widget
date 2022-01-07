@@ -4,7 +4,7 @@ import React from "react";
 import AccountSearch from "./AccountSearch";
 
 const App = () => {
-  const [ladderVisible, setLadderVisible] = React.useState(true);
+  const [ladderVisible, setLadderVisible] = React.useState(false);
   const [buyChange, setBuyChange] = React.useState(null);
   const [sellChange, setSellChange] = React.useState(null);
 
