@@ -127,7 +127,7 @@ section.price-container {
 }
 
 .change.up {
-  background-color: var(--stonex-primary-green);
+  background-color: var(--stonex-primary-mid-blue);
 }
 
 .change.down {
@@ -151,7 +151,7 @@ section.price-container {
   color: var(--stonex-neutral-grey-4);
 }
 .price-box.buy:hover {
-  background-color: var(--stonex-primary-green);
+  background-color: var(--stonex-primary-mid-blue);
   color: var(--stonex-neutral-grey-4);
 }
 
@@ -326,7 +326,7 @@ td:nth-child(4) {
 }
 
 td:nth-child(1) {
-  background-color: var(--stonex-primary-green);
+  background-color: var(--stonex-primary-mid-blue);
   color: var(--stonex-neutral-grey-4);
 }
 td:nth-child(4) {
